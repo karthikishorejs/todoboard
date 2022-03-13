@@ -1,0 +1,9 @@
+<div id="comments">
+  <%= render 'comments/comment', comments: comments %>
+</div>
+<%= paginate(comments) %>
+<br>
+<div class="comment-form">
+  <h3 class="subtitle is-3">Leave a comment</h3>
+  <%= render 'comments/form' %>
+</div>

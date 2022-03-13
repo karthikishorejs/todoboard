@@ -3,11 +3,12 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @comment = @post.comments.new(comment_params.merge(user_id: current_user.id))
+    @comments = @post.comments.new(comment_params.merge(user_id: current_user.id))
     respond_to do |format| 
-      if @comment.save
+      if @comments.save
         format.html { redirect_to post_url(@post), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @post }
+      end
     end
   end
 

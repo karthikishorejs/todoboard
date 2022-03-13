@@ -1,4 +1,14 @@
 <%= form_with(model: [@post, @post.comments.build]) do |form| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <% @post.errors.each do |error| %>
+        <div class="alert alert-warning"><%= error.full_message %></div>
+      <% end %>
+    </div>
+  <% end %>
+    
   <br>
   <div class="form-group">
       <%= form.label :comment %>
