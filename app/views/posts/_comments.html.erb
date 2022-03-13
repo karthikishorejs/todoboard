@@ -1,12 +1,12 @@
 <section>
-    <h5 class="subtitle is-5"> <strong> <%= post.comments.count %> </strong> Comments </h5>
-    <div id="comments">
-      <%= render post.comments %>
-    </div>
-    
-    <br>
-    <div class="comment-form">
-      <h3 class="subtitle is-3">Leave a comment</h3>
-      <%= render 'comments/form', post: post %>
-    </div>
+  <h5 class="subtitle is-5"> <strong> <%= @post.comments.count %> </strong> Comments </h5>
+  <div id="comments">
+    <%= render @post.comments %>
+  </div>
+  
+  <br>
+  <div class="comment-form">
+    <h3 class="subtitle is-3">Leave a comment</h3>
+    <%= render 'comments/form' %>
+  </div>
 </section>
