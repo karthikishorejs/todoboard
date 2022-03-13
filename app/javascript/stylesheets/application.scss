@@ -1,0 +1,19 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+.card {
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.comment-card {
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: black;
+}

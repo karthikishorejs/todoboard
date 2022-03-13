@@ -1,0 +1,11 @@
+<div id="<%= dom_id(comment)%>" class="box">
+  <div class="card" style="width: 100%;">
+    <div class="card-header">
+      Posted by <%= comment.user.name_full %> on <%=time_tag comment.created_at, "data-local": "time.ago" %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> <%= comment.description%> </h5>
+    </div>
+  </div>
+  
+</div>

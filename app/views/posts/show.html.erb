@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <% if user_signed_in? && current_user.id == @post.user_id %>
+    <%= link_to 'Edit this Post', edit_post_path(@post) %> |
+  <% end %>
+  <%= link_to 'Back', posts_path %>
+  <div class="container-fluid">
+    <h4 class="subtitle is-4">Title</h4><%= @post.title %>
+    <br>
+    <br>
+    <h4 class="subtitle is-4">Description</h4><%= @post.description %>
+    <br>
+  </div>
+  <%= render 'posts/comments', post: @post %>
+ 
+</div>
+
