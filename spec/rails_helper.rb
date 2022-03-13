@@ -77,4 +77,8 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::IntegrationHelpers, type: :request
   config.include Warden::Test::Helpers
+
+  config.before(:each, type: :system, js: true) do
+    driven_by :headless_chrome
+  end
 end
